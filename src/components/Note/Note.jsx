@@ -5,7 +5,6 @@ export default function Note(props) {
   async function handleClick(event) {
     event.preventDefault();
     await axios.delete("https://good-notes.onrender.com/home/"+props.email+"/"+props.id);
-    window.location.reload();
   }
   return (
     <div className='Note'>
