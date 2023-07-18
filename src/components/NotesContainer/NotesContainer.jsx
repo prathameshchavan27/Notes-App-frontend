@@ -9,7 +9,7 @@ export default function NotesContainer({email}) {
   const [query, setQuery] = useState("");
   useEffect(()=>{
     const fetchNotes = async()=>{
-      const res = await axios.get("/home/"+email);
+      const res = await axios.get("https://good-notes.onrender.com/home/"+email);
       setNotes(res.data);
     }
     fetchNotes();

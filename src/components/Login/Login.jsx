@@ -10,7 +10,7 @@ export default function Login() {
     async function handleClick(e){
         e.preventDefault();
         try {
-            await axios.post("/",{email,password})
+            await axios.post("https://good-notes.onrender.com/",{email,password})
             .then(res=>{
                 if(res.data==="Valid"){
                     navigate("/home",{state:{id:email}});

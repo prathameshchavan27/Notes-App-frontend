@@ -4,7 +4,7 @@ import axios from 'axios';
 export default function Note(props) {
   async function handleClick(event) {
     event.preventDefault();
-    await axios.delete("/home/"+props.email+"/"+props.id);
+    await axios.delete("https://good-notes.onrender.com/home/"+props.email+"/"+props.id);
     window.location.reload();
   }
   return (

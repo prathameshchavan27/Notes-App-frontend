@@ -24,7 +24,7 @@ export default function CreateNote(props) {
   async function submitNote(event) {
     event.preventDefault();
     try {
-      await axios.post("/home/"+props.email,note);
+      await axios.post("https://good-notes.onrender.com/home/"+props.email,note);
       setNote({
         userId:"",
         title:"",

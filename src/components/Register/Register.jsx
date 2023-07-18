@@ -13,7 +13,7 @@ export default function Register() {
   async function handleClick(e){
     e.preventDefault();
     try {
-      await axios.post("/register",{username,email,password})
+      await axios.post("https://good-notes.onrender.com/register",{username,email,password})
       .then(res=>{
         if(res.data==="Registered"){
           navigate("/home",{state:{id:email}});
